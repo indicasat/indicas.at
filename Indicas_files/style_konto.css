@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700&amp;family=Work+Sans:wght@400;600;700&amp;display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Work Sans", sans-serif;
+
+}
+body{
+
+    display: flex;
+    height: 100vh;
+    color:black;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient();
+}
+.container{
+    max-width: 700px;
+    width: 100%;
+    background: #fff;
+}
+.container .title{
+position: relative ;
+font-size: 25px;
+font-weight: 500
+}
+.container .title::before{
+    content:'';
+    position:absolute;
+    height: 3px;
+    width: 30px;
+    background: green;
+}
+.container form .user-details{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 0 12px 0;
+}
+
+form .user-details .input-box{
+ 
+    width: calc(100% / 2 - 20px);
+}
+.user-details .input-box .details{
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+.user-details .input-box input {
+    height: 45px;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding-left: 15px;
+    font-size: 16px;
+   border-bottom-width: 2px;
+   transition: all 0.3s ease;
+  
+}
+
+.user-details .input-box input:focus,
+
+.user-details .input-box input:valid{
+    border-color: green;
+
+}
+form .option-details .option-title{
+    font-size: 20px;
+    font-weight: 500;
+}
+form .option-details .category{
+    width: 80%;
+    display: flex;
+    background:green;
+justify-content:space-between;
+margin: 14px 0;
+
+
+}
+.option-details .category label {
+display: flex;
+align-items: center;
+}
+.option-details .category .dot{
+    height: 18px;
+    width: 18px;
+    background: #d9d9d9;
+    border-radius: 50%;
+    margin-right: 10px;
+    border: 5px solid transparent;
+    transition: all 0.3s ease;
+
+}
+#dot-1:checked ~ .category label .one, 
+    #dot-2:checked ~ .category label .two, 
+        #dot-3:checked ~ .category label .three {
+    border-color: #d9d9d9;
+    background: green;
+
+}
+form input [type="radio"]{
+    display: none;
+}
